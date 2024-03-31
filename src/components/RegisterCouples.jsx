@@ -1,5 +1,6 @@
-import {  useEffect, useState } from "react";
+import { useState } from "react";
 import { CoupleForm } from "./CouplesForm";
+import { Matches } from "./Matches";
 
 export const RegisterCouples = ({ couples, time }) => {
 
@@ -37,17 +38,15 @@ export const RegisterCouples = ({ couples, time }) => {
             }];
         }
         
-        setPlayers([players]);
+        setPlayers(players);
     }
-
-    const onInputChange = () => {}
 
     console.log(players);
     return (
         <>
             <div>
                 <h3>Ingresa los nombres de las parejas</h3>
-                <form onSubmit={ handlerSubmit }  onChange={onInputChange}>
+                <form onSubmit={ handlerSubmit } >
                     {
                         partners.map((partner) => ( 
                             <CoupleForm key={partner.id} { ...partner }/>
@@ -56,6 +55,9 @@ export const RegisterCouples = ({ couples, time }) => {
                     <p></p>
                     <button type="submit"> Organizar partidos </button> 
                 </form>
+            </div>
+            <div>
+                <Matches key="tabla-partidos" couples={players} />
             </div>
             
         </>
