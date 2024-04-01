@@ -34,6 +34,7 @@ export const organizarPartidos = (couples) => {
             group2[j] = group2[j+1];
         }
         group2[groupTeamsSize-1] = lastElement;
+        //Este workaround hay que revisarlo
         rounds[r] = [group1+ "," + group2];
     }
     return partidos(couples, rounds);

@@ -57,6 +57,9 @@ button:focus-visible {
 input[type=text] {
   width: 180px;
 }
+.result {
+  width: 30px !important;
+}
 @media (prefers-color-scheme: light) {
   :root {
     color: #213547;
