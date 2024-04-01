@@ -3,7 +3,7 @@ import {organizarPartidos } from "../helpers/CreateMatches";
 export const Matches = (  { couples, time } ) => {
 
     const rounds = organizarPartidos(couples);
-    console.log("rondas", rounds);
+   // console.log("rondas", rounds);
     
     const warmingUpTime = 5;
     const roundsNumber = rounds.length;
