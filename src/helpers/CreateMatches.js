@@ -36,8 +36,8 @@ export const organizarPartidos = (couples) => {
         group2[groupTeamsSize-1] = lastElement;
         rounds[r] = [group1+ "," + group2];
     }
-     partidos(couples, rounds);
-    return rounds;
+    return partidos(couples, rounds);
+    //return rounds;
 }
 
 /**
@@ -63,6 +63,6 @@ export const partidos = (couples, rounds) => {
             court++;
         }
     }
-    console.log("matches ", matches);
+   // console.log("matches ", matches);
     return matches;
 }
