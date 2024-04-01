@@ -57,7 +57,7 @@ export const RegisterCouples = ({ couples, time }) => {
                 </form>
             </div>
             <div>
-                <Matches key="tabla-partidos" couples={players} />
+                <Matches key="tabla-partidos" couples={players} time={time} />
             </div>
             
         </>
