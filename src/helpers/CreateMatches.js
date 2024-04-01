@@ -12,7 +12,7 @@ export const organizarPartidos = (couples) => {
     let rounds = [];
     rounds[0] = [group1+ "," + group2];
 
-    //Este ciclo implementa el algoritmo de arreglos circulares dejando el primer elemento del primer arreglo fijo        
+    //Algoritmo de arreglos circulares dejando el primer elemento del primer arreglo fijo        
     for (let r = 1; r < sizeTeams - 1; r++){
         const lastElement = group1[groupTeamsSize - 1];
         const firtsElementG2 = group2[0];
