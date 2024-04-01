@@ -41,7 +41,7 @@ export const RegisterCouples = ({ couples, time }) => {
         setPlayers(players);
     }
 
-    console.log(players);
+   // console.log(players);
     return (
         <>
             <div>
