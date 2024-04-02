@@ -3,7 +3,8 @@ import { RegisterCouples } from "./RegisterCouples"
 
 export const AddCouples = () => {
 
-    const [couples , setCouples] = useState(2);
+    const minCouples = 2;
+    const [couples , setCouples] = useState(minCouples);
     const [time, setTime] = useState(90);
     const [isVisible, setIsVisible] = useState(false); 
 
@@ -13,7 +14,7 @@ export const AddCouples = () => {
 
     const onResetCouples = () => {
         setIsVisible(false);
-        setCouples(2);
+        setCouples(minCouples);
         setTime(90);
     }
 
@@ -24,8 +25,8 @@ export const AddCouples = () => {
                 <p>¿Cúantas parejas?</p>
                 <input id="couples" 
                     type="number" 
-                    min="2" 
-                    placeholder="Mínimo 2"
+                    min={minCouples} 
+                    placeholder={"Minimo "+ minCouples}
                     value = { couples }
                     onChange={ onCouplesChange }
                     step={2}
