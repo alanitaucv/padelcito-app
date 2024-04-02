@@ -58,7 +58,7 @@ input[type=text] {
   width: 180px;
 }
 .result {
-  width: 30px !important;
+  width: 40px;
 }
 @media (prefers-color-scheme: light) {
   :root {

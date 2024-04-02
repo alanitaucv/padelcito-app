@@ -6,14 +6,15 @@ export const Round = ({numRound, round}) => {
 
     return (
         <>
-            <div>Ingresa los resultados de cada ronda</div>
+            <h4>{"Ronda "+numRound}</h4>
             {
                 round.map((match, j) => {
                     cancha = j + 1;
                     let key = "round"+ numRound + "cancha"+ cancha;  
-                    <Match key ={key} round={numRound} cancha={cancha} couple1={match[0].players} couple2={match[1].players} />
+                    return  (<Match className="centerMatch" key ={key} round={numRound} cancha={cancha} couple1={match[0].players} couple2={match[1].players} />);
                 })
             }
+            <hr></hr>
         </>
     )
 }

@@ -6,6 +6,7 @@ export const RegisterCouples = ({ couples, time }) => {
 
     console.log("cantidad de parejas", couples);
     const [players, setPlayers] = useState([]);
+    const [isVisible, setIsVisible] = useState(false);
 
     let partners = [];
 
@@ -39,6 +40,7 @@ export const RegisterCouples = ({ couples, time }) => {
         }
         
         setPlayers(players);
+        setIsVisible(true);
     }
 
    // console.log(players);
@@ -56,10 +58,13 @@ export const RegisterCouples = ({ couples, time }) => {
                     <button type="submit"> Organizar partidos </button> 
                 </form>
             </div>
-            <div>
-                <Matches key="tabla-partidos" couples={players} time={time} />
-            </div>
             
+            {
+                isVisible && 
+                <div>
+                    <Matches key="matchesPerRound" couples={players} time={time} />
+                </div>
+            }
         </>
     )
     

@@ -16,10 +16,10 @@ export const Match = ({round, cancha, couple1, couple2}) => {
 
     return (
         <>
-            <div key={key}>
-                <p>{"Ronda "+ round + " Cancha "+ cancha }</p>
+            <div className="center" key={key}>
+                <h5>{ " Cancha "+ cancha }</h5>
                 { couple1 +" "}
-                <input type="text" 
+                <input type="number" 
                     key={"r#p1"+key}
                     id={ "id#p1"+key } 
                     name = { "name#"+key }
@@ -27,9 +27,10 @@ export const Match = ({round, cancha, couple1, couple2}) => {
                     value={ gamesCouple1 }
                     onChange={ onInputChangeP1 }    
                     placeholder="0"
+                    min="0"
                 />
                 {" vs "}
-                <input type="text" 
+                <input type="number" 
                     key={"r#p2"+key}
                     id={ "id#p2"+key } 
                     name = { "name#"+key }
@@ -37,6 +38,7 @@ export const Match = ({round, cancha, couple1, couple2}) => {
                     value={ gamesCouple2 }
                     onChange={ onInputChangeP2 }    
                     placeholder="0"
+                    min="0"
                 />
                 { " "+couple2}    
             </div>

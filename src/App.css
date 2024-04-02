@@ -7,8 +7,9 @@
 .inputPlayer {
   padding: 0.2em;
 }
-.labelPlayer{
-  
+.center{
+  margin: 0 auto;
+  justify-content: center;
 }
 .logo {
   height: 6em;
