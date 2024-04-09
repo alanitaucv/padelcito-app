@@ -1,5 +1,5 @@
 import {organizarPartidos } from "../helpers/CreateMatches";
-import { RegisterResults } from "./RegisterResults";
+import { RegisterRounds } from "./RegisterRounds";
 
 export const Matches = (  { couples, time } ) => {
 
@@ -16,6 +16,6 @@ export const Matches = (  { couples, time } ) => {
         <h3>Partidos y Resultados</h3>
         <h4>{ roundsNumber } Ronda(s). { courts } Cancha(s).</h4>
         <h5>{ (Math.floor(timeOnCourt/roundsNumber)) } minutos por partido y { 5 }min. de calentamiento para el primer partido.</h5>
-        <RegisterResults matches={ matches } courts={courts}/>
+        <RegisterRounds matches={ matches } courts={courts} couples={couples}/>
     </>); 
 }
