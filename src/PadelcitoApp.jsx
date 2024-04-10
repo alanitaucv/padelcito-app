@@ -6,7 +6,7 @@ function PadelcitoApp() {
   return (
     <>
       <h1>Bienvenido a Padelcito App</h1>
-      <h3>Agrega la cantidad de parejas y el tiempo en cancha</h3>
+      <h3>Modo de juego: Todos contra Todos</h3>
       <AddCouples/>
     </>
   )
