@@ -6,7 +6,7 @@ export const Round = ({numRound, round}) => {
 
     return (
         <>
-            <h4>{"Ronda "+numRound}</h4>
+            <h3 className="blue">{"Ronda "+numRound}</h3>
             {
                 round.map((couple, j) => {
                     cancha = j + 1;

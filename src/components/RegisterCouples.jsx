@@ -4,7 +4,6 @@ import { Matches } from "./Matches";
 
 export const RegisterCouples = ({ couples, time }) => {
 
-    console.log("cantidad de parejas", couples);
     const [players, setPlayers] = useState([]);
     const [isVisible, setIsVisible] = useState(false);
 
@@ -43,10 +42,9 @@ export const RegisterCouples = ({ couples, time }) => {
         setIsVisible(true);
     }
 
-   // console.log(players);
     return (
         <>
-            <div>
+            <div className="container">
                 <h3>Ingresa los nombres de las parejas</h3>
                 <form onSubmit={ handlerSubmit } >
                     {
@@ -55,7 +53,7 @@ export const RegisterCouples = ({ couples, time }) => {
                         ))
                     }
                     <p></p>
-                    <button type="submit"> Organizar partidos </button> 
+                    <button className="primary" type="submit"> Organizar partidos </button> 
                 </form>
             </div>
             

@@ -9,7 +9,10 @@ export const AddCouples = () => {
     const [isVisible, setIsVisible] = useState(false); 
 
     const onAddCouples = () => setIsVisible(true);
-    const onCouplesChange = (event) => setCouples(event.target.value);     
+    const onCouplesChange = (event) =>{
+        if (event.target.value<13) setCouples(event.target.value)
+        else setCouples(12);
+    };     
     const onTimeChange = (event) => setTime(event.target.value);
 
     const onResetCouples = () => {
@@ -30,6 +33,7 @@ export const AddCouples = () => {
                     value = { couples }
                     onChange={ onCouplesChange }
                     step={2}
+                    max={12}
                 />
                 <p>¿Cúantos minutos?</p>
                 <input id="time" 
@@ -41,7 +45,7 @@ export const AddCouples = () => {
                 />
                 <p></p>
                 <button onClick={ onResetCouples }> Reset </button>
-                <button onClick={ onAddCouples }> Agregar parejas </button>
+                <button className="primary" onClick={ onAddCouples }> Agregar parejas </button>
                 
             </div>
             {

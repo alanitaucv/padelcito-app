@@ -14,8 +14,10 @@ export const Matches = (  { couples, time } ) => {
     return (
     <>
         <h3>Partidos y Resultados</h3>
-        <h4>{ roundsNumber } Ronda(s). { courts } Cancha(s).</h4>
-        <h5>{ (Math.floor(timeOnCourt/roundsNumber)) } minutos por partido y { 5 }min. de calentamiento para el primer partido.</h5>
-        <RegisterRounds matches={ matches } courts={courts} couples={couples}/>
+        <div className="container">
+            <h4>{ roundsNumber } Ronda(s). { courts } Cancha(s).</h4>
+            <h5>{ (Math.floor(timeOnCourt/roundsNumber)) } minutos por partido y { 5 }min. de calentamiento para el primer partido.</h5>
+            <RegisterRounds matches={ matches } couples={couples}/>
+        </div>
     </>); 
 }

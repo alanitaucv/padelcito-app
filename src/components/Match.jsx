@@ -18,9 +18,9 @@ export const Match = ({round, cancha, couple1, couple2}) => {
     return (
         <>
             <div className="center" key={key}>
-                <h5>{ " Cancha "+ cancha }</h5>
-                {/* { (Number(gamesCouple1) > Number(gamesCouple2)) && <span>Ganaste</span>} */}
-                { couple1.players +" "}
+                <hr />
+                <h5 className='court'>{ " Cancha "+ cancha }</h5>
+                <p className='couples'>{couple1.players +" "}
                 <input type="number" 
                     key={"p1#"+key+idP1}
                     id={ "id#p1"+key+idP1 } 
@@ -43,7 +43,7 @@ export const Match = ({round, cancha, couple1, couple2}) => {
                     min="0"
                 />
                 { " "+couple2.players}    
-                {/* { (Number(gamesCouple1) < Number(gamesCouple2)) && <span>Ganaste</span>} */}
+                </p>
             </div>
         </>
     )

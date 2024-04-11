@@ -1,7 +1,8 @@
 import { useState } from "react";
 import { Round } from "./Round";
+import { PositionsTable } from "./PositionsTable";
 
-export const RegisterRounds = ({ matches, courts, couples }) => {
+export const RegisterRounds = ({ matches, couples }) => {
 
     const [isVisible, setIsVisible] = useState(false);
     const [results, setResults] = useState([]);
@@ -50,6 +51,7 @@ export const RegisterRounds = ({ matches, courts, couples }) => {
 
     return (
         <>
+        <hr></hr>
         <div>Ingresa los resultados de cada ronda</div>
         <hr></hr>
         <form onSubmit = { handlerSubmit }>
@@ -61,17 +63,10 @@ export const RegisterRounds = ({ matches, courts, couples }) => {
                     )
                 })
             } 
-            <button type="submit"> Calcular Puntajes </button> 
+            <button className="primary" type="submit"> Calcular Puntajes </button> 
         </form>
-
         {
-            isVisible && 
-            <ul>
-            { results.map((team, index) =>
-                <li key={team.id}>{ "#"+(index+1) +" "+ team.players +': '+ team.points + ' Puntos'}</li>
-                )
-            }
-            </ul>
+            isVisible && <PositionsTable results={ results } />
         }
     </>
 )
